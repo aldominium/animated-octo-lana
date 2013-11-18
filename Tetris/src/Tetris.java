@@ -75,14 +75,14 @@ public class Tetris extends Applet
     void pintarTetris( Graphics g ) {
         
         puntos = new Point3D[ 32 ];
-        puntos[0] = new Point3D( -1, -1, -1 );
-        puntos[1] = new Point3D( -1, -1,  1 );
-        puntos[2] = new Point3D( -1,  1, -1 );
-        puntos[3] = new Point3D( -1,  1,  1 );
-        puntos[4] = new Point3D(  1, -1, -1 );
-        puntos[5] = new Point3D(  1, -1,  1 );
-        puntos[6] = new Point3D(  1,  1, -1 );
-        puntos[7] = new Point3D(  1,  1,  1 );
+        puntos[0] = new Point3D( -2, -2, -2 );
+        puntos[1] = new Point3D( -2, -2,  2 );
+        puntos[2] = new Point3D( -2,  2, -2 );
+        puntos[3] = new Point3D( -2,  2,  2 );
+        puntos[4] = new Point3D(  2, -2, -2 );
+        puntos[5] = new Point3D(  2, -2,  2 );
+        puntos[6] = new Point3D(  2,  2, -2 );
+        puntos[7] = new Point3D(  2,  2,  2 );
        
         lados = new Edge[ 48 ];
         lados[ 0] = new Edge( 0, 1 );
@@ -108,16 +108,16 @@ public class Tetris extends Applet
        
                     //Dibujas puntos hacia atras
                     for(int i = 8; i<16; i++){
-                        puntos[i]= new Point3D(puntos[i-8].x - 2, puntos[i-8].y, puntos[i-8].z);
+                        puntos[i]= new Point3D(puntos[i-8].x - 4, puntos[i-8].y, puntos[i-8].z);
                     }
                     //Puntos de arriba
                     for(int i = 16; i<24; i++){
     
-                        puntos[i]= new Point3D(puntos[i-16].x, puntos[i-8].y + 2, puntos[i-16].z);
+                        puntos[i]= new Point3D(puntos[i-16].x, puntos[i-8].y + 4, puntos[i-16].z);
                     }
                     //Puntos de la derecha
                     for(int i = 24; i<32; i++){    
-                        puntos[i]= new Point3D(puntos[i-8].x + 2, puntos[i-8].y, puntos[i-8].z);
+                        puntos[i]= new Point3D(puntos[i-8].x + 4, puntos[i-8].y, puntos[i-8].z);
                     }
       
                     for(int i = 12; i<24; i++){
